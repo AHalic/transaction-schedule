@@ -5,15 +5,30 @@ edges = []
 transactions = (SELECT * from t1, t2 where t2.time == t1.time + 1)
 
 (1, 1,  'R',  'X'),
-(2, 2,  'R',  'Y'),
-(3, 3,  'W',  'X'),
-(4, 2,  'W',  'X'),
-(5, 1,  'W',  'X'),
-(6, 2,  'C',  '-'),
-(7, 1,  'C',  '-');
+(2, 2,  'R',  'X'),
+(3, 2,  'W',  'X'),
+(4, 1,  'W',  'X'),
+(5, 2,  'C',  '-'),
+(6, 1,  'C',  '-');
+
+(1, 1,  'R',  'X'),(2, 2,  'R',  'X'),
+(1, 1,  'R',  'X'),(3, 2,  'W',  'X'), -> conflito
+(1, 1,  'R',  'X'),(4, 1,  'W',  'X'), 
+(1, 1,  'R',  'X'),(5, 2,  'C',  '-'),
+(1, 1,  'R',  'X'),(6, 1,  'C',  '-');
+(2, 2,  'R',  'X'),(3, 2,  'W',  'X'), -> conflito
+(2, 2,  'R',  'X'),(4, 1,  'W',  'X'), -> conflito
+(2, 2,  'R',  'X'),(5, 2,  'C',  '-'),
+(2, 2,  'R',  'X'),(6, 1,  'C',  '-');
+(3, 2,  'W',  'X'),(4, 1,  'W',  'X'), -> conflito
+(3, 2,  'W',  'X'),(5, 2,  'C',  '-'),
+(3, 2,  'W',  'X'),(6, 1,  'C',  '-');
+(4, 1,  'W',  'X'),(5, 2,  'C',  '-'),
+(4, 1,  'W',  'X'),(6, 1,  'C',  '-');
 
 #TODO melhorar criacao do grafo
 # caso em que o conflito seria entre a primeira e terceira linha (t1 e t3)
+
 
 se trans1=trans2 entao pula
 senao entao verifica a operacao.
