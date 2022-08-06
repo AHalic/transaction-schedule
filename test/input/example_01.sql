@@ -1,4 +1,7 @@
 -- example_01 (PostgreSQL 10)
+-- Conflicts:
+-- 1 -> 2
+-- 2 -> 1
 INSERT INTO "Schedule" ("time", "#t", "op", "attr") VALUES
 (1, 1,  'R',  'X'),
 (2, 2,  'R',  'X'),
