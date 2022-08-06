@@ -1,4 +1,6 @@
 -- Schedule (PostgreSQL 10)
+DROP TABLE IF EXISTS "Schedule";
+
 CREATE TABLE "Schedule" (
 	"time" integer,
 	"#t" integer NOT NULL,
