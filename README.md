@@ -72,7 +72,7 @@ The tests are located on the `test` directory, with the inputs and outputs files
 
 ## Github
 
-[Link](https://github.com/beamaia/transaction-schedule-sql) to Access the full code.
+[Link](https://github.com/beamaia/transaction-schedule-sql) to access the full code.
 
 ## Special thanks
 
