@@ -52,6 +52,7 @@ After running the find_cycle.sql, the following Graph table will be created:
 |   3    |    2    | 
 
 Representing the following directed graph:
+
 <img src="images/graph.png" alt="Graph image" width="250"/>
 
 Since there's a cycle from 2 to 3, the *testeEquivalenciaPorConflito* returns 1.
@@ -67,6 +68,11 @@ docker-compose down
 ```
 
 The tests are located on the `test` directory, with the inputs and outputs files for each example. One of them is shown bellow.
+
+
+## Github
+
+[Link](https://github.com/beamaia/transaction-schedule-sql) to Access the full code.
 
 ## Special thanks
 
