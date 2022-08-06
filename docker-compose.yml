@@ -25,6 +25,7 @@ services:
     # database
     db:
         image: postgres:10
+        container_name: db
         environment:
             # database configuration
             # privileged user password
@@ -39,15 +40,17 @@ services:
 
     # Adminer
     adminer:
+        container_name: adminer
         image: adminer
         ports:
             - 8080:8080
 
     # pgAdmin
     pgadmin:
+        container_name: pgadmin
         image: dpage/pgadmin4
         environment:
-            - PGADMIN_DEFAULT_EMAIL=login
+            - PGADMIN_DEFAULT_EMAIL=login@email.com
             - PGADMIN_DEFAULT_PASSWORD=pass
         ports:
             - 8081:80
