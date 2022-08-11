@@ -69,6 +69,20 @@ docker-compose down
 
 The tests are located on the `test` directory, with the inputs and outputs files for each example. One of them is shown bellow.
 
+## Running the algorithm externaly
+
+The algorithm is composed of 3 files, the first create the Schedule's table, which should be filled in by the example. After that, the algorithm to find the cycle, which also creates an auxiliary graph table, can be ran. Finally, to run other examples, the schedule table must be clean. 
+
+Bellow the names of the files and the order to run them:
+
+```
+1. create_shedule.sql
+2. example_xx.sql
+3. find_cycle.sql
+4. clean_schedule.sql
+
+repeat the last 3 to run multiple examples
+```
 
 ## Github
 
