@@ -71,7 +71,9 @@ The tests are located on the `test` directory, with the inputs and outputs files
 
 ## Algorithm's requirements
 
-To run the algorithm (`find_cycle.sql`), it is necessary to have an empty Schedule's table. Two files are given to create this table, and to clean it: `create_shedule.sql`, `clean_schedule.sql`.
+To run the algorithm (`find_cycle.sql`), it is necessary to have a table named Schedule with the schema informed in the beginning. In case there isn't one, the file create_schedule.sql can be used. Before using the script again, the Schedule table must be cleaned and inputted its new values. The file clean_schedule.sql can be used for that purpose in case needed.
+
+During the algorithm, a Graph table will be created. With each execution of the algorithm, the table is dropped and created again, given the values in the Schedule table. 
 
 
 ## Github
